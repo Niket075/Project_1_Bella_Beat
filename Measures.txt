@@ -1,0 +1,7 @@
+Weekend = CALCULATE(DISTINCTCOUNT(hourlyCalories_merged[Date]), hourlyCalories_merged[Days] = "Weekend")
+
+
+Workday = CALCULATE(DISTINCTCOUNT(hourlyCalories_merged[Date]), hourlyCalories_merged[Days] = "Workday")
+
+
+Difference between days when weight Recorded = DATEDIFF(MIN(weightLogInfo_merged[Date]), MAX(weightLogInfo_merged[Date]), DAY)
